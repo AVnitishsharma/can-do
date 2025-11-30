@@ -52,6 +52,7 @@ main{
   padding: var(--space-sm) var(--space-md);
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 nav{
   height: 5vh;
@@ -83,7 +84,7 @@ section{
   display: flex;
   justify-content: space-between;
   flex-grow: 1;
-  gap: var(--space-sm);
+  gap: var(--space-md);
 }
 .task-colum{
   width: 100%;
@@ -92,7 +93,7 @@ section{
   border-radius: var(--border-radies-md);
 }
 .hoverOver{
-  scale: 0.98;
+  scale: 1.03;
   border: 2px dotted var(--border-primary-color);
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -167,4 +168,13 @@ section{
 }
 .modal .content button:hover{
   background-color: transparent;
+}
+
+.delete{
+  position: absolute;
+  font-size: 100px;
+  background-color: black;
+  bottom: 0;
+  right: 50%;
+  display: none;
 }

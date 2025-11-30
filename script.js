@@ -6,6 +6,9 @@ const toggleModalButton = document.querySelector("#toggle-modal")
 const modal = document.querySelector(".modal")
 const closeButton = document.querySelector(".bg")
 const addTaskBtn = document.querySelector(".add-task")
+const taskTitle = document.querySelector("#task-title")
+const taskDescription = document.querySelector("#task-description")
+const deletebox = document.querySelector(".delete")
 
 
 let dragElement = null
@@ -48,15 +51,13 @@ closeButton.addEventListener("click", () => {
 })
 
 addTaskBtn.addEventListener(("click"), () => {
-  const taskTitle = document.querySelector("#task-title")
-  const taskDescription = document.querySelector("#task-description")
+
   const div = document.createElement("div")
   div.classList.add("task")
   div.setAttribute("draggable","true")
-  console.log(taskTitle)
   div.innerHTML =`
-          <h2>${taskTitle}</h2>
-          <p>${taskDescription}</p> `
+          <h2>${taskTitle.value}</h2>
+          <p>${taskDescription.value}</p> `
   
   todo.appendChild(div)
   modal.style.display = "none"
