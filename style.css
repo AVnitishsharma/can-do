@@ -17,8 +17,8 @@ body{
 
 :root{
   /* bg colors */
-  --bg-pramiry-color: #000000;
-  --bg-scondary-color: #111111;
+  --bg-pramiry-color: #4a9481;
+  --bg-scondary-color: #3597a8;
 
   /* text colors */
   --text-primary-color: #eeeeee;
@@ -151,7 +151,7 @@ section{
 .modal .content input,textarea{
   width: 100%;
   background-color: transparent;
-  color: white;
+  color: black;
   padding: var(--space-sm) var(--space-md);
   border: 1px solid var(--box-border-color);
   border-radius: var(--border-radies-sm);

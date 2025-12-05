@@ -15,7 +15,6 @@ const deletebox = document.querySelector(".delete")
 if (localStorage.getItem("tasks")) {
   const data = JSON.parse(localStorage.getItem("tasks"));
   console.log(data)
-
   for(const col in data){
     const column = document.querySelector(`#${col}`);
     data[col].forEach(task =>{
@@ -29,6 +28,8 @@ if (localStorage.getItem("tasks")) {
         todo.appendChild(div)
     })
   }
+  
+    
 }
 let dragElement = null
 
@@ -45,7 +46,7 @@ function updateTaskCounts() {
         description: t.querySelector("p").innerText
       }
     })
-    localStorage.setItem("tasks", JSON.stringify(tasksData));
+    // localStorage.setItem("tasks", JSON.stringify(tasksData));
   })
 }
 
@@ -108,6 +109,9 @@ addTaskBtn.addEventListener(("click"), () => {
   div.addEventListener("drag", (e) => {
     dragElement = div
   })
+
+  taskTitle.value = ""
+  taskDescription.value = ""
 
   updateTaskCounts();
 })
